@@ -1,0 +1,12 @@
+CREATE QUERY detect_shared_infra(VERTEX<Transaction> tx_id) FOR GRAPH FraudGraph {
+  Start (Transaction) = {tx_id};
+  
+  Devices = SELECT d FROM Start:s -(USED_DEVICE:e)-> Device:d;
+  IPs = SELECT i FROM Start:s -(FROM_IP:e)-> IPAddress:i;
+
+  ConnectedTx = SELECT t FROM Devices:d -(<USED_DEVICE:e)- Transaction:t
+                UNION
+                SELECT t FROM IPs:i -(<FROM_IP:e)- Transaction:t;
+
+  PRINT ConnectedTx[ConnectedTx.id, ConnectedTx.amount, ConnectedTx.risk_score];
+}

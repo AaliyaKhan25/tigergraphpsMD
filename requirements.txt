@@ -1,0 +1,10 @@
+streamlit
+streamlit-agraph
+pyvis
+matplotlib
+networkx
+pyTigerGraph
+langchain
+langchain-openai
+langgraph
+python-dotenv

@@ -1,0 +1,822 @@
+[
+  {
+    "case_id": "CASE_TX_BENCHMARK_1001",
+    "transaction_id": "TX_BENCHMARK_1001",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1001",
+                "amount": 1250.0,
+                "risk_score": 0.82
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.65
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "REQUEST_STEP_UP_AUTH",
+        "approval_route": "AUTOMATED",
+        "reasoning": "High model risk score with ambiguous device history."
+      },
+      "additional_evidence_received": {
+        "step_up_auth_status": "FAILED",
+        "mfa_method": "SMS_OTP",
+        "geo_mismatch_detected": true
+      },
+      "after_additional_evidence": {
+        "action": "BLOCK_ACCOUNT_AND_FREEZE",
+        "approval_route": "HUMAN_ANALYST",
+        "reasoning": "Failed step-up MFA challenge combined with shared IP infrastructure."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": true,
+      "sar_narrative": "Suspicious activity report for Case CASE_TX_BENCHMARK_1001: Shared device cluster with failed MFA verification."
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1002",
+    "transaction_id": "TX_BENCHMARK_1002",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1002",
+                "amount": 1250.0,
+                "risk_score": 0.45
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.15
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      },
+      "additional_evidence_received": {},
+      "after_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": false,
+      "sar_narrative": ""
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1003",
+    "transaction_id": "TX_BENCHMARK_1003",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1003",
+                "amount": 1250.0,
+                "risk_score": 0.82
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.65
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "REQUEST_STEP_UP_AUTH",
+        "approval_route": "AUTOMATED",
+        "reasoning": "High model risk score with ambiguous device history."
+      },
+      "additional_evidence_received": {
+        "step_up_auth_status": "FAILED",
+        "mfa_method": "SMS_OTP",
+        "geo_mismatch_detected": true
+      },
+      "after_additional_evidence": {
+        "action": "BLOCK_ACCOUNT_AND_FREEZE",
+        "approval_route": "HUMAN_ANALYST",
+        "reasoning": "Failed step-up MFA challenge combined with shared IP infrastructure."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": true,
+      "sar_narrative": "Suspicious activity report for Case CASE_TX_BENCHMARK_1003: Shared device cluster with failed MFA verification."
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1004",
+    "transaction_id": "TX_BENCHMARK_1004",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1004",
+                "amount": 1250.0,
+                "risk_score": 0.45
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.15
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      },
+      "additional_evidence_received": {},
+      "after_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": false,
+      "sar_narrative": ""
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1005",
+    "transaction_id": "TX_BENCHMARK_1005",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1005",
+                "amount": 1250.0,
+                "risk_score": 0.82
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.65
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "REQUEST_STEP_UP_AUTH",
+        "approval_route": "AUTOMATED",
+        "reasoning": "High model risk score with ambiguous device history."
+      },
+      "additional_evidence_received": {
+        "step_up_auth_status": "FAILED",
+        "mfa_method": "SMS_OTP",
+        "geo_mismatch_detected": true
+      },
+      "after_additional_evidence": {
+        "action": "BLOCK_ACCOUNT_AND_FREEZE",
+        "approval_route": "HUMAN_ANALYST",
+        "reasoning": "Failed step-up MFA challenge combined with shared IP infrastructure."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": true,
+      "sar_narrative": "Suspicious activity report for Case CASE_TX_BENCHMARK_1005: Shared device cluster with failed MFA verification."
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1006",
+    "transaction_id": "TX_BENCHMARK_1006",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1006",
+                "amount": 1250.0,
+                "risk_score": 0.45
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.15
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      },
+      "additional_evidence_received": {},
+      "after_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": false,
+      "sar_narrative": ""
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1007",
+    "transaction_id": "TX_BENCHMARK_1007",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1007",
+                "amount": 1250.0,
+                "risk_score": 0.82
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.65
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "REQUEST_STEP_UP_AUTH",
+        "approval_route": "AUTOMATED",
+        "reasoning": "High model risk score with ambiguous device history."
+      },
+      "additional_evidence_received": {
+        "step_up_auth_status": "FAILED",
+        "mfa_method": "SMS_OTP",
+        "geo_mismatch_detected": true
+      },
+      "after_additional_evidence": {
+        "action": "BLOCK_ACCOUNT_AND_FREEZE",
+        "approval_route": "HUMAN_ANALYST",
+        "reasoning": "Failed step-up MFA challenge combined with shared IP infrastructure."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": true,
+      "sar_narrative": "Suspicious activity report for Case CASE_TX_BENCHMARK_1007: Shared device cluster with failed MFA verification."
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1008",
+    "transaction_id": "TX_BENCHMARK_1008",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1008",
+                "amount": 1250.0,
+                "risk_score": 0.45
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.15
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      },
+      "additional_evidence_received": {},
+      "after_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": false,
+      "sar_narrative": ""
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1009",
+    "transaction_id": "TX_BENCHMARK_1009",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1009",
+                "amount": 1250.0,
+                "risk_score": 0.82
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.65
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "REQUEST_STEP_UP_AUTH",
+        "approval_route": "AUTOMATED",
+        "reasoning": "High model risk score with ambiguous device history."
+      },
+      "additional_evidence_received": {
+        "step_up_auth_status": "FAILED",
+        "mfa_method": "SMS_OTP",
+        "geo_mismatch_detected": true
+      },
+      "after_additional_evidence": {
+        "action": "BLOCK_ACCOUNT_AND_FREEZE",
+        "approval_route": "HUMAN_ANALYST",
+        "reasoning": "Failed step-up MFA challenge combined with shared IP infrastructure."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": true,
+      "sar_narrative": "Suspicious activity report for Case CASE_TX_BENCHMARK_1009: Shared device cluster with failed MFA verification."
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1010",
+    "transaction_id": "TX_BENCHMARK_1010",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1010",
+                "amount": 1250.0,
+                "risk_score": 0.45
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.15
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      },
+      "additional_evidence_received": {},
+      "after_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": false,
+      "sar_narrative": ""
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1011",
+    "transaction_id": "TX_BENCHMARK_1011",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1011",
+                "amount": 1250.0,
+                "risk_score": 0.82
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.65
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "REQUEST_STEP_UP_AUTH",
+        "approval_route": "AUTOMATED",
+        "reasoning": "High model risk score with ambiguous device history."
+      },
+      "additional_evidence_received": {
+        "step_up_auth_status": "FAILED",
+        "mfa_method": "SMS_OTP",
+        "geo_mismatch_detected": true
+      },
+      "after_additional_evidence": {
+        "action": "BLOCK_ACCOUNT_AND_FREEZE",
+        "approval_route": "HUMAN_ANALYST",
+        "reasoning": "Failed step-up MFA challenge combined with shared IP infrastructure."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": true,
+      "sar_narrative": "Suspicious activity report for Case CASE_TX_BENCHMARK_1011: Shared device cluster with failed MFA verification."
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1012",
+    "transaction_id": "TX_BENCHMARK_1012",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1012",
+                "amount": 1250.0,
+                "risk_score": 0.45
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.15
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      },
+      "additional_evidence_received": {},
+      "after_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": false,
+      "sar_narrative": ""
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1013",
+    "transaction_id": "TX_BENCHMARK_1013",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1013",
+                "amount": 1250.0,
+                "risk_score": 0.82
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.65
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "REQUEST_STEP_UP_AUTH",
+        "approval_route": "AUTOMATED",
+        "reasoning": "High model risk score with ambiguous device history."
+      },
+      "additional_evidence_received": {
+        "step_up_auth_status": "FAILED",
+        "mfa_method": "SMS_OTP",
+        "geo_mismatch_detected": true
+      },
+      "after_additional_evidence": {
+        "action": "BLOCK_ACCOUNT_AND_FREEZE",
+        "approval_route": "HUMAN_ANALYST",
+        "reasoning": "Failed step-up MFA challenge combined with shared IP infrastructure."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": true,
+      "sar_narrative": "Suspicious activity report for Case CASE_TX_BENCHMARK_1013: Shared device cluster with failed MFA verification."
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1014",
+    "transaction_id": "TX_BENCHMARK_1014",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1014",
+                "amount": 1250.0,
+                "risk_score": 0.45
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.15
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      },
+      "additional_evidence_received": {},
+      "after_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": false,
+      "sar_narrative": ""
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1015",
+    "transaction_id": "TX_BENCHMARK_1015",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1015",
+                "amount": 1250.0,
+                "risk_score": 0.82
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.65
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "REQUEST_STEP_UP_AUTH",
+        "approval_route": "AUTOMATED",
+        "reasoning": "High model risk score with ambiguous device history."
+      },
+      "additional_evidence_received": {
+        "step_up_auth_status": "FAILED",
+        "mfa_method": "SMS_OTP",
+        "geo_mismatch_detected": true
+      },
+      "after_additional_evidence": {
+        "action": "BLOCK_ACCOUNT_AND_FREEZE",
+        "approval_route": "HUMAN_ANALYST",
+        "reasoning": "Failed step-up MFA challenge combined with shared IP infrastructure."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": true,
+      "sar_narrative": "Suspicious activity report for Case CASE_TX_BENCHMARK_1015: Shared device cluster with failed MFA verification."
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1016",
+    "transaction_id": "TX_BENCHMARK_1016",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1016",
+                "amount": 1250.0,
+                "risk_score": 0.45
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.15
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      },
+      "additional_evidence_received": {},
+      "after_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": false,
+      "sar_narrative": ""
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1017",
+    "transaction_id": "TX_BENCHMARK_1017",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1017",
+                "amount": 1250.0,
+                "risk_score": 0.82
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.65
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "REQUEST_STEP_UP_AUTH",
+        "approval_route": "AUTOMATED",
+        "reasoning": "High model risk score with ambiguous device history."
+      },
+      "additional_evidence_received": {
+        "step_up_auth_status": "FAILED",
+        "mfa_method": "SMS_OTP",
+        "geo_mismatch_detected": true
+      },
+      "after_additional_evidence": {
+        "action": "BLOCK_ACCOUNT_AND_FREEZE",
+        "approval_route": "HUMAN_ANALYST",
+        "reasoning": "Failed step-up MFA challenge combined with shared IP infrastructure."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": true,
+      "sar_narrative": "Suspicious activity report for Case CASE_TX_BENCHMARK_1017: Shared device cluster with failed MFA verification."
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1018",
+    "transaction_id": "TX_BENCHMARK_1018",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1018",
+                "amount": 1250.0,
+                "risk_score": 0.45
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.15
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      },
+      "additional_evidence_received": {},
+      "after_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": false,
+      "sar_narrative": ""
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1019",
+    "transaction_id": "TX_BENCHMARK_1019",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1019",
+                "amount": 1250.0,
+                "risk_score": 0.82
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.65
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "REQUEST_STEP_UP_AUTH",
+        "approval_route": "AUTOMATED",
+        "reasoning": "High model risk score with ambiguous device history."
+      },
+      "additional_evidence_received": {
+        "step_up_auth_status": "FAILED",
+        "mfa_method": "SMS_OTP",
+        "geo_mismatch_detected": true
+      },
+      "after_additional_evidence": {
+        "action": "BLOCK_ACCOUNT_AND_FREEZE",
+        "approval_route": "HUMAN_ANALYST",
+        "reasoning": "Failed step-up MFA challenge combined with shared IP infrastructure."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": true,
+      "sar_narrative": "Suspicious activity report for Case CASE_TX_BENCHMARK_1019: Shared device cluster with failed MFA verification."
+    }
+  },
+  {
+    "case_id": "CASE_TX_BENCHMARK_1020",
+    "transaction_id": "TX_BENCHMARK_1020",
+    "internal_investigation_record": {
+      "trigger": "MODEL_HIGH_RISK_SCORE",
+      "evidence_gathered": {
+        "connected_infrastructure": [
+          {
+            "ConnectedTx": [
+              {
+                "id": "TX_BENCHMARK_1020",
+                "amount": 1250.0,
+                "risk_score": 0.45
+              }
+            ]
+          }
+        ]
+      },
+      "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+      "uncertainty_score": 0.15
+    },
+    "next_best_action": {
+      "before_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      },
+      "additional_evidence_received": {},
+      "after_additional_evidence": {
+        "action": "ALLOW",
+        "approval_route": "AUTOMATED",
+        "reasoning": "Low risk profile and verified device."
+      }
+    },
+    "suspicious_activity_report": {
+      "sar_required": false,
+      "sar_narrative": ""
+    }
+  }
+]
