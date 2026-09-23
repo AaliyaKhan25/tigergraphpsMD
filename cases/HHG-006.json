@@ -1,0 +1,39 @@
+{
+  "case_id": "CASE_TX_BENCHMARK_1006",
+  "transaction_id": "TX_BENCHMARK_1006",
+  "internal_investigation_record": {
+    "trigger": "MODEL_HIGH_RISK_SCORE",
+    "evidence_gathered": {
+      "connected_infrastructure": [
+        {
+          "ConnectedTx": [
+            {
+              "id": "TX_BENCHMARK_1006",
+              "amount": 1250.0,
+              "risk_score": 0.45
+            }
+          ]
+        }
+      ]
+    },
+    "policy_context": "Policy Rule 4.2: Transactions over $1000 with shared IP address and risk score > 0.7 require step-up authentication before blocking.",
+    "uncertainty_score": 0.15
+  },
+  "next_best_action": {
+    "before_additional_evidence": {
+      "action": "ALLOW",
+      "approval_route": "AUTOMATED",
+      "reasoning": "Low risk profile and verified device."
+    },
+    "additional_evidence_received": {},
+    "after_additional_evidence": {
+      "action": "ALLOW",
+      "approval_route": "AUTOMATED",
+      "reasoning": "Low risk profile and verified device."
+    }
+  },
+  "suspicious_activity_report": {
+    "sar_required": false,
+    "sar_narrative": ""
+  }
+}
