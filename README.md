@@ -70,7 +70,7 @@ The platform operates across four decoupled layers: Data Ingestion, TigerGraph Q
 
 └────────────────────────────────────────────────────────────────────────────────────────┘
 
-
+````
 
 ### 🛠️ Core Capabilities & Module Breakdown
 
@@ -90,7 +90,7 @@ Network Graph Visualizer: High-contrast network topology rendering for Security 
 
 🟥 High-Risk Entity (HIGH RISK MERCHANT): Blacklisted merchants or flagged receiving entities (e.g., MERCHANT_28).
 
-LangGraph Agent Decision Pipeline
+### LangGraph Agent Decision Pipeline
 
 Autonomous Step-Up Triggering: Automatically dispatches biometric or multi-factor authentication challenges when transaction uncertainty ratings exceed configured thresholds (> 0.50).
 
@@ -98,19 +98,19 @@ State Progression Tracking: Evaluates risk metrics dynamically before and after 
 
 Account Lockdown Protocol: Instantly freezes compromised accounts if step-up authentication returns a FAILED or timed-out status.
 
-Compliance & Policy Engine
+### Compliance & Policy Engine
 
 Rules Engine Evaluation: Evaluates raw graph traversal outputs against FinCEN guidelines, BSA regulations, and risk scoring models (MODEL_HIGH_RISK_SCORE).
 
 Human-In-The-Loop (HITL) Override: Allows compliance officers to inspect evidence graphs, submit audit notes, and persist manually approved or declined decisions back into graph memory.
 
-Automated FinCEN SAR Filing Generator
+### Automated FinCEN SAR Filing Generator
 
 LLM Regulatory Narratives: Synthesizes graph evidence, transaction histories, shared infrastructure metrics, and agent audit trails into standard compliance narratives.
 
-🗄️ TigerGraph Schema & Benchmark JSON Structure
+## 🗄️ TigerGraph Schema & Benchmark JSON Structure
 
-GSQL Schema Definition (gsql/schema.gsql)
+### GSQL Schema Definition (gsql/schema.gsql)
 
 CREATE VERTEX Account (PRIMARY_ID id STRING, account_created_at DATETIME, risk_rating DOUBLE)
 
@@ -349,6 +349,7 @@ git add cases/ submission/
 git commit -m "Add required 20 HHG case JSON files in cases/ directory"
 
 git push origin main --force
+````
 
 ## 🖥️ Streamlit Analytics Dashboard Overview
 
@@ -368,7 +369,7 @@ Agent Decision Timeline: Real-time visual progression tracking initial triggers,
 
 Human-in-The-Loop Override Panel: Text fields allowing compliance analysts to submit audit notes and override agent decisions directly into graph storage.
 
-🔒 Security Protocol & Push Protection
+## 🔒 Security Protocol & Push Protection
 
 To protect API credentials and maintain compliance with GitHub Push Protection:
 
