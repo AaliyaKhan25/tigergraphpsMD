@@ -256,10 +256,10 @@ with col_graph:
         node_id, label=label, color=color, shape=shape, size=size
     )
 
-  net.add_edge("TX_BENCHMARK", "IP_SHARED", title="ORIGIN_IP")
-  net.add_edge("TX_BENCHMARK", "DEV_FP", title="DEVICE_USED")
-  net.add_edge("TX_BENCHMARK", "MERCHANT", title="PROCESSED_AT")
-  net.add_edge("IP_SHARED", "ACCT_2", title="SHARED_INFRA")
+  net.add_edge("TX_BENCHMARK", "IP_SHARED", title="ORIGIN_IP") #type:ignore
+  net.add_edge("TX_BENCHMARK", "DEV_FP", title="DEVICE_USED") #type:ignore
+  net.add_edge("TX_BENCHMARK", "MERCHANT", title="PROCESSED_AT") #type:ignore
+  net.add_edge("IP_SHARED", "ACCT_2", title="SHARED_INFRA") #type:ignore
 
   net.barnes_hut()
   net.save_graph("hhgoa_graph.html")
